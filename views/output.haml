@@ -9,10 +9,11 @@
     %link{:href => '/main.css', :type => 'text/css', :rel => 'stylesheet'}
   %body
     %div
+      %h4 Results:
       %ul
         - list.each do |word|
           %li
             = word
     %div
       %a{href: url('/')}
-        Back
+        New Query

@@ -1,6 +1,5 @@
 require './lexicon'
 require "set"
-# require 'Tuple'
 
 class SpecialLexicon < Lexicon
 
@@ -135,9 +134,8 @@ end
 # Space complexity is O(N) where N is the total number of words in the dictionary for storing all words in set.
 # In the worst case, Queue for BFS would need space for all N words.
 
-
-
 # TESTING
+# MAIN
 # obj = SpecialLexicon.new
 
 # Output: act cat
@@ -148,13 +146,6 @@ end
 # prefix_words = obj.get_prefixed_words("abab")
 # puts prefix_words
 
-#Output should be 5
-# wordList = ["hot","dot","dog","lot","log","cog"]
-# "hit" -> "hot" -> "dot" -> "dog" -> "cog"
-# # cold -> cord -> card -> ward -> warm
-# # chair -> charr -> chirr -> shirr -> shire -> spire -> spiry -> sairy -> saily -> sably -> sable -> table 12
+# cold -> wold -> word -> ward -> warm
 # ladder = obj.get_word_ladder("cold", "warm")
 # puts ladder
-# puts ladder.length
-
-

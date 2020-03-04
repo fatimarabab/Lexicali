@@ -13,7 +13,9 @@ following:
     * Solution: Preprocess Lexicon and store into 2 hash maps
     * Hashmap 1 i.e. words_to_sorted maps words to a string with the word's letters sorted alphabetically
     * Hashmap 2 i.e. anagrams maps sorted strings to it's corresponding anagrams
-    * Time Complexity: O(1) time using both hashes return anagrams, Space complexity: O(n) + O(n) = 2*O(n) in worst case.
+    *  get_anagrams => Time Complexity: O(1) time using both hashes return anagrams, Space complexity: O(1).
+    * The reason get_anagrams takes O(1) time & space is because we pre processed the Lexicon in preprocess_anagrams.
+    * preprocess_anagrams => Time Complexity: 2 * O(n) time to create both hashmaps, Space complexity: O(n) + O(n) = 2*O(n).
 
 * Find all words with a given prefix - DONE
     * Solution: Since `word.txt` is sorted we can iterate through the dictionary array to find words
@@ -28,6 +30,9 @@ following:
     * Space complexity: O(N) where N is the total number of words in the dictionary for storing all words in set.
 
 * Return the results using ajax requests instead of page navigation
+    * Solution: Made AJAX requests to display results of each query on the same page instead of page navigation.
+    * Results are displayed under each Query (i.e. below input box and button on the webpage).
+    * Changes: Changed index.haml and output.haml to better display results.
 
 See the [Requirements](#requirements) section below for more details.
 
@@ -154,6 +159,6 @@ anagram for 'cat' but 'tca' is not.
 the chain differs by only a single letter. The start and end words must be the
 same length.
 
-**Example:** cold -> cord -> card -> ward -> warm
+**Example:** cold -> wold -> word -> ward -> warm
 
 **See:** http://en.wikipedia.org/wiki/Word_ladder

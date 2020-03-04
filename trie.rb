@@ -87,8 +87,8 @@ class Trie < Lexicon
     end
 end
 
-#TESTING
-#MAIN
+# TESTING
+# MAIN
 # obj = Lexicon.new
 
 # trie = Trie.new
