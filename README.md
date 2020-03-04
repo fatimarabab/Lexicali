@@ -9,9 +9,24 @@ the website's startup.
 The goal of the project is to update the site and lexicon so that it can do the
 following:
 
-* Generate all possible anagrams of a word
-* Find all words with a given prefix
-* Print the shortest possible word ladder between two words
+* Generate all possible anagrams of a word - DONE
+    * Solution: Preprocess Lexicon and store into 2 hash maps
+    * Hashmap 1 i.e. words_to_sorted maps words to a string with the word's letters sorted alphabetically
+    * Hashmap 2 i.e. anagrams maps sorted strings to it's corresponding anagrams
+    * Time Complexity: O(1) time using both hashes return anagrams, Space complexity: O(n) + O(n) = 2*O(n) in worst case.
+
+* Find all words with a given prefix - DONE
+    * Solution: Since `word.txt` is sorted we can iterate through the dictionary array to find words
+    * Break loop once all words with given prefix are found by using .start_with? method
+    * Time Complexity: O(x), x = index of last word with given prefix in dictionary
+    * Space Complexity: O(m), m = number of words with given prefix.
+    * Optional Solution implemented in `trie.rb` file using Tries and Depth First Search
+
+* Print the shortest possible word ladder between two words -DONE
+    * Solution: Using Breadth First Search find shortest path b/w start_word and end_word.
+    * Time complexity: O(L * N) where L = start_word.length/end_word.length, N is the total number of words in the dictionary. 
+    * Space complexity: O(N) where N is the total number of words in the dictionary for storing all words in set.
+
 * Return the results using ajax requests instead of page navigation
 
 See the [Requirements](#requirements) section below for more details.

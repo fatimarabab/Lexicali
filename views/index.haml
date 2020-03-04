@@ -10,11 +10,11 @@
     %link{:href => "/main.css?z=#{Time.now.to_i}", :type => 'text/css', :rel => 'stylesheet'}
   %body
     %div
-      %h1 Anagrams
+      %h1#anagrams Anagrams
       %label
         Start Word:
       %input#anagram-word
-      %button#anagram-link{href: '#'}
+      %button#anagram-link
         Generate Anagrams
     %div
       %h1 Prefixes
@@ -33,3 +33,18 @@
       %input#end-word
       %button#word-ladder{href: '#'}
         Build Word Ladder
+    %div
+      %h1 Anagram Results
+      %label
+        Anagrams:
+      %p#anagram-results
+    %div
+      %h1 Prefix Results
+      %label
+        Prefix words:
+      %p#anagram-results
+    %div
+      %h1 Word Ladder Results
+      %label
+        Word Ladder:
+      %p#anagram-results

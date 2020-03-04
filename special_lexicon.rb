@@ -35,8 +35,8 @@ class SpecialLexicon < Lexicon
   # Space Complexity is O(n) to store hash
 
   # Generates an array of all the anagrams of the given word
-  # Approach : hash words from the dictionary such that
-  # key stores sorted letters; value points to corresponding anagrams from dictionary
+  # Approach : call preprocess_anagrams
+  # return anagrams[words_to_sorted[word]]
   # @param {String} word
   # @return {String[]}
   def get_anagrams(word)
@@ -58,7 +58,6 @@ class SpecialLexicon < Lexicon
     end
   end
   # Time Complexity is O(1) to get result from @anagrams hash
-
 
   
   # Generates an array of all the words that have the given word as a prefix
